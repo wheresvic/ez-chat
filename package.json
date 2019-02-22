@@ -51,15 +51,5 @@
   "devDependencies": {
     "node-sass": "4.11.0",
     "release-it": "10.1.0"
-  },
-  "release-it": {
-    "pkgFiles": [
-      "package.json",
-      "package-lock.json"
-    ],
-    "beforeStart": "npm run test:server",
-    "npm": {
-      "publish": false
-    }
   }
 }

@@ -1,0 +1,7 @@
+{
+  "pkgFiles": ["package.json", "package-lock.json"],
+  "beforeStart": "npm run test:server",
+  "npm": {
+    "publish": false
+  }
+}
