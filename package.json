@@ -1,6 +1,6 @@
 {
   "name": "ez-chat",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A simple chat application",
   "main": "ez-chat-server.js",
   "scripts": {
@@ -49,6 +49,17 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "4.11.0"
+    "node-sass": "4.11.0",
+    "release-it": "10.1.0"
+  },
+  "release-it": {
+    "pkgFiles": [
+      "package.json",
+      "package-lock.json"
+    ],
+    "beforeStart": "npm run test",
+    "npm": {
+      "publish": false
+    }
   }
 }
