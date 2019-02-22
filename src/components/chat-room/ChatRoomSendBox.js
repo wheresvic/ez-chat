@@ -18,15 +18,17 @@ class ChatRoomSendBox extends Component {
   onChatMessageFormSubmit = event => {
     event.preventDefault();
 
-    this.props.onSendBoxSend({
-      message: this.state.currentChatMessage,
-      from: this.props.username,
-      when: moment().unix()
-    });
+    if (this.state.currentChatMessage) {
+      this.props.onSendBoxSend({
+        message: this.state.currentChatMessage,
+        from: this.props.username,
+        when: moment().unix()
+      });
 
-    this.setState({
-      currentChatMessage: ""
-    });
+      this.setState({
+        currentChatMessage: ""
+      });
+    }
   };
 
   onChatMessageFormSendClick = event => {
