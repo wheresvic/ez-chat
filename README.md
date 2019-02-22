@@ -6,6 +6,14 @@ EzChat is a standalone web-socket based chat application. As of version 1.0.0, i
 - a single chat-room
 - username storage
 
+## Libraries and frameworks
+
+- Bulma.css
+- React.js bootstrapped with `create-react-app` as UI framework
+- Node.js backend runtime
+  - Express.js
+  - Socket.io
+
 ## Development
 
 Require Node.js `>= v10.x`. Run `npm install` to install all dependencies.
