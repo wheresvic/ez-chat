@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ez Chat!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <style type="text/css">
+      .chat-message + .chat-message {
+        border-top: 1px solid rgba(219, 219, 219, 0.5);
+      }
+
+      .navbar {
+        border-bottom: 1px solid rgba(219, 219, 219, 0.5);
+      }
+
+      #send-box {
+        border-top: 5px solid rgba(219, 219, 219, 0.5);
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background: white;
+
+        padding: 2rem 1.5rem; /* override section padding */
+      }
+
+      #dummy-message {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          Ez Chat
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start"></div>
+
+        <div class="navbar-end"></div>
+      </div>
+    </nav>
+    <!--
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Free Room
+          </h1>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <div class="notification">
+              No messages, write something to get started!
+            </div>
+
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div class="columns chat-message is-mobile">
+              <div class="column is-2">
+                <div class="chat-message-from">Joshy</div>
+                <div class="chat-message-when">3 min ago</div>
+              </div>
+              <div class="column is-10 chat-message-content">
+                sd/j;kvnk; ;l;kjwfjskjfdjfdsljkfhdsjfklgh
+              </div>
+            </div>
+            <div id="dummy-message"></div>
+          </div>
+          <!-- column is-6 -->
+        </div>
+      </div>
+    </section>
+
+    <section id="send-box" class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <h4 class="title is-4">Free room</h4>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <div class="box">
+              <form>
+                <div class="field has-addons has-addons-centered">
+                  <p class="control">
+                    <a class="button is-secondary">
+                      vic
+                    </a>
+                  </p>
+                  <p class="control is-expanded">
+                    <input class="input" type="text" placeholder="Your message" />
+                  </p>
+                  <p class="control">
+                    <a class="button is-primary">
+                      Send
+                    </a>
+                  </p>
+                </div>
+              </form>
+            </div>
+            <!-- box -->
+          </div>
+          <!-- column -->
+        </div>
+        <!-- columns -->
+      </div>
+      <!-- container -->
+    </section>
+  </body>
+</html>
