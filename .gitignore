@@ -65,8 +65,6 @@ typings/
 # production
 /build
 /src/styles/css
-/public
-/ez-chat-server/public
 /db
 
 # test
